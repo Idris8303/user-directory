@@ -16,10 +16,10 @@ app.get('/details/:id',function(req, res){
 
 
 
-  let Users = data.users.find(function(item){
-    return item.id == req.params.id;
+  let foundUser = data.users.find(function(user){
+    return user.id == req.params.id;
   });
-  res.render('details', person);
+  res.render('details', foundUser);
 
 });
 
